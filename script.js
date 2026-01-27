@@ -15,14 +15,8 @@ class App {
   }
 
   applyDarkMode() {
-    if (this.darkMode) {
-      document.body.classList.add("dark-mode");
-      // Устанавливаем атрибут для более строгого контроля темы
-      document.documentElement.setAttribute('data-theme', 'dark');
-    } else {
-      document.body.classList.remove("dark-mode");
-      document.documentElement.setAttribute('data-theme', 'light');
-    }
+    // Устанавливаем атрибут для более строгого контроля темы
+    document.documentElement.setAttribute('data-theme', this.darkMode ? 'dark' : 'light');
 
     // Обновляем состояние UI элементов, связанных с темой
     this.updateThemeUI();
