@@ -2,7 +2,9 @@
 class App {
   constructor() {
     this.currentCategory = "Политические деятели";
-    this.darkMode = localStorage.getItem("darkMode") === "true";
+    // Устанавливаем темную тему по умолчанию, но проверяем localStorage для сохранения предпочтений пользователя
+    const storedDarkMode = localStorage.getItem("darkMode");
+    this.darkMode = storedDarkMode !== null ? storedDarkMode === "true" : true; // по умолчанию true (темная тема)
     this.init();
   }
 
@@ -47,6 +49,18 @@ class App {
     themeIndicators.forEach(indicator => {
       indicator.textContent = this.darkMode ? 'Темная тема' : 'Светлая тема';
     });
+
+    // Обновляем иконку кнопки переключения темы
+    const themeIcon = document.getElementById('themeIcon');
+    if (themeIcon) {
+      themeIcon.textContent = this.darkMode ? '☀️' : '🌙';
+    } else {
+      // Если элемента с ID themeIcon нет, обновляем текст самой кнопки
+      const themeToggleBtn = document.getElementById('themeToggle');
+      if (themeToggleBtn) {
+        themeToggleBtn.textContent = this.darkMode ? '☀️' : '🌙';
+      }
+    }
   }
 
   renderCategories() {
@@ -181,6 +195,14 @@ class App {
     const titleElement = document.querySelector(".title");
     if (titleElement) {
       titleElement.addEventListener("dblclick", () => {
+        this.toggleDarkMode();
+      });
+    }
+
+    // Добавляем обработчик для кнопки переключения темы
+    const themeToggleBtn = document.getElementById("themeToggle");
+    if (themeToggleBtn) {
+      themeToggleBtn.addEventListener("click", () => {
         this.toggleDarkMode();
       });
     }
