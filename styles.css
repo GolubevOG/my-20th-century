@@ -132,8 +132,7 @@ html[data-theme="dark"] .memory-text {
 .header {
   border-bottom: 1px solid #d6d3d1;
   background-color: rgba(245, 245, 244, 0.8);
-  position: sticky;
-  top: 0;
+  /* Убираем position: sticky чтобы шапка уходила при скролле */
   z-index: 100;
   backdrop-filter: blur(10px);
   transition:
@@ -202,45 +201,70 @@ body.dark-mode .exhibition-info {
 }
 
 .category-btn {
-  padding: 0.5rem 1rem;
-  border-radius: 0.5rem;
+  padding: 0.75rem 1.5rem; /* Увеличиваем внутренние отступы для более солидного вида */
+  border-radius: 0; /* Убираем скругления для строгости */
   font-weight: 500;
-  font-size: 0.875rem;
+  font-size: 0.9rem;
+  font-family: Georgia, serif; /* Используем serif шрифт для благородства */
+  letter-spacing: 0.025em; /* Добавляем немного расстояния между буквами */
   transition: all 0.3s ease;
-  border: 1px solid #d1d5db;
+  border: 1px solid #7f1d1d; /* Темно-красная граница */
   cursor: pointer;
-  background-color: white;
-  color: #374151;
+  background-color: transparent; /* Прозрачный фон для строгости */
+  color: #7f1d1d; /* Темно-красный текст */
+  position: relative;
+  overflow: hidden;
+  text-transform: uppercase; /* Преобразуем в верхний регистр для торжественности */
+}
+
+.category-btn::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background-color: #7f1d1d;
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+.category-btn:hover::after {
+  width: 100%;
 }
 
 body.dark-mode .category-btn {
-  background-color: #404040;
-  color: #d1d5db;
-  border-color: #57534e;
+  background-color: transparent;
+  color: #fca5a5; /* Светло-красный для темной темы */
+  border-color: #7f1d1d;
 }
 
-.category-btn.selected {
+.Category-btn.selected {
   background-color: #7f1d1d; /* Темно-красный цвет */
   color: white;
+  border-color: #7f1d1d;
   box-shadow:
     0 4px 6px -1px rgba(0, 0, 0, 0.1),
     0 2px 4px -1px rgba(0, 0, 0, 0.06);
-  transform: scale(1.05);
+  transform: translateY(-2px); /* Легкий подъем при выборе */
 }
 
 body.dark-mode .category-btn.selected {
-  background-color: #dc2626; /* Красный цвет для темной темы */
+  background-color: #991b1b; /* Более насыщенный красный для темной темы */
+  border-color: #991b1b;
+  color: white;
 }
 
 .category-btn:not(.selected):hover {
-  background-color: #fef3c7;
-  box-shadow:
-    0 4px 6px -1px rgba(0, 0, 0, 0.1),
-    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  background-color: rgba(127, 29, 29, 0.1); /* Легкий красный оттенок при наведении */
+  color: #991b1b;
+  border-color: #991b1b;
 }
 
 body.dark-mode .category-btn:not(.selected):hover {
-  background-color: #57534e;
+  background-color: rgba(200, 40, 40, 0.2);
+  color: #fecaca;
+  border-color: #fca5a5;
 }
 
 /* Category title styles */
