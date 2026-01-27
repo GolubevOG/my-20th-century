@@ -11,7 +11,7 @@ body {
     Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   line-height: 1.6;
   color: #374151;
-  background: linear-gradient(to bottom, #f5f5f4 0%, #e7e5e4 100%);
+  background: linear-gradient(to bottom, #f3f4f6 0%, #e5e7eb 100%); /* Светло-серый фон */
   transition:
     background-color 0.3s ease,
     color 0.3s ease;
@@ -19,7 +19,7 @@ body {
 
 body.dark-mode {
   color: #d1d5db;
-  background: linear-gradient(to bottom, #1c1917 0%, #292524 100%);
+  background: linear-gradient(to bottom, #1f2937 0%, #111827 100%); /* Темно-серый с оттенком */
 }
 
 /* Более строгое применение темной темы через атрибут */
@@ -43,17 +43,17 @@ html[data-theme="dark"] .subtitle {
 }
 
 html[data-theme="dark"] .exhibition-info {
-  color: #78716c;
+  color: #9ca3af; /* Светло-серый */
 }
 
 html[data-theme="dark"] .category-btn {
-  background-color: #404040;
+  background-color: #374151; /* Темно-серый */
   color: #d1d5db;
-  border-color: #57534e;
+  border-color: #4b5563; /* Серый */
 }
 
 html[data-theme="dark"] .category-btn.selected {
-  background-color: #f59e0b;
+  background-color: #dc2626; /* Красный цвет */
 }
 
 html[data-theme="dark"] .category-btn:not(.selected):hover {
@@ -65,61 +65,61 @@ html[data-theme="dark"] .category-title h2 {
 }
 
 html[data-theme="dark"] .divider {
-  background-color: #f59e0b;
+  background-color: #dc2626; /* Красный цвет */
 }
 
 html[data-theme="dark"] .person-card {
-  background-color: #404040;
-  border-color: #57534e;
+  background-color: #374151; /* Темно-серый */
+  border-color: #4b5563; /* Серый */
 }
 
 html[data-theme="dark"] .photo-container {
-  background-color: #57534e;
+  background-color: #4b5563; /* Серый */
 }
 
 html[data-theme="dark"] .person-name {
-  color: #f5f5f4;
+  color: #f3f4f6; /* Светло-серый */
 }
 
 html[data-theme="dark"] .person-years {
-  color: #fbbf24;
+  color: #ef4444; /* Красный */
 }
 
 html[data-theme="dark"] .person-field {
-  color: #9ca3af;
+  color: #9ca3af; /* Светло-серый */
 }
 
 html[data-theme="dark"] .person-biography {
-  color: #d1d5db;
+  color: #d1d5db; /* Светло-серый */
 }
 
 html[data-theme="dark"] .additional-info {
-  border-color: #57534e;
+  border-color: #4b5563; /* Серый */
 }
 
 html[data-theme="dark"] .info-label {
-  color: #9ca3af;
+  color: #9ca3af; /* Светло-серый */
 }
 
 html[data-theme="dark"] .info-value {
-  color: #d1d5db;
+  color: #d1d5db; /* Светло-серый */
 }
 
 html[data-theme="dark"] .archived-note {
-  color: #fbbf24;
+  color: #ef4444; /* Красный */
 }
 
 html[data-theme="dark"] .footer {
-  border-color: #44403c;
-  background-color: #1c1917;
+  border-color: #374151; /* Темно-серый */
+  background-color: #1f2937; /* Темно-серый */
 }
 
 html[data-theme="dark"] .footer-content {
-  color: #9ca3af;
+  color: #9ca3af; /* Светло-серый */
 }
 
 html[data-theme="dark"] .memory-text {
-  color: #78716c;
+  color: #9ca3af; /* Светло-серый */
 }
 
 .container {
@@ -161,29 +161,29 @@ body.dark-mode .header {
 }
 
 body.dark-mode .title {
-  color: #f5f5f4;
+  color: #f3f4f6; /* Светло-серый для темной темы */
 }
 
 .subtitle {
   font-size: 1.25rem;
-  color: #6b7280;
+  color: #4b5563; /* Темно-серый */
   transition: color 0.3s ease;
 }
 
 body.dark-mode .subtitle {
-  color: #9ca3af;
+  color: #d1d5db; /* Светло-серый для темной темы */
 }
 
 .exhibition-info {
   font-size: 0.875rem;
-  color: #9ca3af;
+  color: #6b7280; /* Серый */
   font-style: italic;
   margin-top: 0.5rem;
   transition: color 0.3s ease;
 }
 
 body.dark-mode .exhibition-info {
-  color: #78716c;
+  color: #9ca3af; /* Светло-серый для темной темы */
 }
 
 /* Main content styles */
@@ -220,7 +220,7 @@ body.dark-mode .category-btn {
 }
 
 .category-btn.selected {
-  background-color: #92400e;
+  background-color: #7f1d1d; /* Темно-красный цвет */
   color: white;
   box-shadow:
     0 4px 6px -1px rgba(0, 0, 0, 0.1),
@@ -229,7 +229,7 @@ body.dark-mode .category-btn {
 }
 
 body.dark-mode .category-btn.selected {
-  background-color: #f59e0b;
+  background-color: #dc2626; /* Красный цвет для темной темы */
 }
 
 .category-btn:not(.selected):hover {
@@ -263,12 +263,12 @@ body.dark-mode .category-title h2 {
 .divider {
   width: 6rem;
   height: 0.25rem;
-  background-color: #92400e;
+  background-color: #7f1d1d; /* Темно-красный цвет */
   margin: 0 auto;
 }
 
 body.dark-mode .divider {
-  background-color: #f59e0b;
+  background-color: #dc2626; /* Красный цвет */
 }
 
 /* People grid styles */
@@ -362,12 +362,12 @@ body.dark-mode .photo-container {
   border-radius: 9999px;
   font-size: 0.75rem;
   font-weight: 600;
-  background-color: #92400e;
+  background-color: #7f1d1d; /* Темно-красный цвет */
   color: white;
 }
 
 .status-after {
-  background-color: #7f1d1d;
+  background-color: #dc2626; /* Красный цвет */
 }
 
 .card-content {
@@ -391,13 +391,13 @@ body.dark-mode .person-name {
 
 .person-years {
   font-size: 0.875rem;
-  color: #b45309;
+  color: #7f1d1d; /* Темно-красный цвет */
   font-weight: 500;
   margin-bottom: 0.5rem;
 }
 
 body.dark-mode .person-years {
-  color: #fbbf24;
+  color: #ef4444; /* Красный цвет для темной темы */
 }
 
 .person-field {
@@ -457,13 +457,13 @@ body.dark-mode .info-value {
 }
 
 .archived-note {
-  color: #b45309;
+  color: #7f1d1d; /* Темно-красный цвет */
   font-style: italic;
   margin-top: 0.25rem;
 }
 
 body.dark-mode .archived-note {
-  color: #fbbf24;
+  color: #ef4444; /* Красный цвет */
 }
 
 /* Footer styles */
@@ -574,18 +574,20 @@ html[data-theme="dark"] body {
   cursor: pointer;
   font-size: 1.2em;
   transition: all 0.3s ease;
+  background-color: #f3f4f6; /* Светло-серый фон */
+  border-color: #9ca3af; /* Серая граница */
 }
 
 body.dark-mode .theme-toggle-btn {
-  background-color: #404040;
-  border-color: #57534e;
+  background-color: #374151; /* Темно-серый */
+  border-color: #4b5563; /* Серая граница */
   color: #d1d5db;
 }
 
 /* Дополнительные улучшения для более строгого контроля темной темы */
 html[data-theme="dark"] .theme-toggle-btn {
-  background-color: #404040 !important;
-  border-color: #57534e !important;
+  background-color: #374151 !important; /* Темно-серый */
+  border-color: #4b5563 !important; /* Серая граница */
   color: #d1d5db !important;
 }
 

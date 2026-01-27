@@ -44,12 +44,6 @@ class App {
   }
 
   updateThemeUI() {
-    // Обновляем UI элементы, если есть какие-то индикаторы темы
-    const themeIndicators = document.querySelectorAll('[data-theme-indicator]');
-    themeIndicators.forEach(indicator => {
-      indicator.textContent = this.darkMode ? 'Темная тема' : 'Светлая тема';
-    });
-
     // Обновляем иконку кнопки переключения темы
     const themeIcon = document.getElementById('themeIcon');
     if (themeIcon) {
