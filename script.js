@@ -121,7 +121,7 @@ class App {
             <div class="photo-container">
                 <img src="${person.photoBefore}" alt="${person.name}" class="person-photo" data-before="${person.photoBefore}" data-after="${person.photoAfter}">
                 <div class="overlay">
-                    <p class="overlay-text">Нажмите для фото после репрессии</p>
+                    <p class="overlay-text">Нажмите на фото</p>
                 </div>
                 <div class="status-indicator">До репрессии</div>
             </div>
