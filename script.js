@@ -126,20 +126,24 @@ class App {
                 <div class="status-indicator">До репрессии</div>
             </div>
             <div class="card-content">
-                <h3 class="person-name">${person.name}</h3>
-                <p class="person-years">${person.years}</p>
-                <p class="person-field">${person.field}</p>
-                <div class="person-biography">${person.biography}</div>
-                <div class="additional-info">
-                    <div class="info-item">
-                        <span class="info-label">Дата репрессии:</span>
-                        <span class="info-value">${person.repressionDate}</span>
+                <div class="info-section info-section-1">
+                    <h3 class="person-name">${person.name}</h3>
+                    <p class="person-years">${person.years}</p>
+                    <p class="person-field">${person.field}</p>
+                    <div class="person-biography">${person.biography}</div>
+                </div>
+                <div class="info-section info-section-2" style="display: none;">
+                    <div class="additional-info">
+                        <div class="info-item">
+                            <span class="info-label">Дата репрессии:</span>
+                            <span class="info-value">${person.repressionDate}</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Судьба:</span>
+                            <span class="info-value">${person.fate}</span>
+                        </div>
+                        ${!hasValidAfterUrl ? '<div class="archived-note">* Фото после репрессии недоступно (архивные данные)</div>' : ""}
                     </div>
-                    <div class="info-item">
-                        <span class="info-label">Судьба:</span>
-                        <span class="info-value">${person.fate}</span>
-                    </div>
-                    ${!hasValidAfterUrl ? '<div class="archived-note">* Фото после репрессии недоступно (архивные данные)</div>' : ""}
                 </div>
             </div>
         `;
@@ -148,8 +152,11 @@ class App {
     const photoContainer = card.querySelector(".photo-container");
     const photoImg = card.querySelector(".person-photo");
     const statusIndicator = card.querySelector(".status-indicator");
+    const infoSection1 = card.querySelector(".info-section-1");
+    const infoSection2 = card.querySelector(".info-section-2");
 
     let showAfterPhoto = false;
+    let showInfoSection2 = false;
 
     photoContainer.addEventListener("click", () => {
       if (hasValidAfterUrl) {
@@ -176,6 +183,16 @@ class App {
           statusIndicator.textContent = "До репрессии";
           statusIndicator.classList.remove("status-after");
         }
+      }
+
+      // Переключаем отображение информации
+      showInfoSection2 = !showInfoSection2;
+      if (showInfoSection2) {
+        infoSection1.style.display = "none";
+        infoSection2.style.display = "block";
+      } else {
+        infoSection1.style.display = "block";
+        infoSection2.style.display = "none";
       }
     });
 
