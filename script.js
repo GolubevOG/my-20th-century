@@ -144,6 +144,7 @@ class App {
                         </div>
                         ${!hasValidAfterUrl ? '<div class="archived-note">* Фото после репрессии недоступно (архивные данные)</div>' : ""}
                     </div>
+                    ${!hasValidAfterUrl ? '<div class="missing-photo-note">Фото после репрессии отсутствует</div>' : ""}
                 </div>
             </div>
         `;

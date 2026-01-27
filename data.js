@@ -50,7 +50,8 @@ const categories = [
         repressionDate: "16 декабря 1934 (арест)",
         fate: "Расстрелян 25 августа 1936 (Первый московский процесс)",
         fameLevel: "Высокая (национальная)",
-        photoBefore: "https://commons.wikimedia.org/wiki/File:Lev_Kamenev.jpg",
+        photoBefore:
+          "https://avatars.dzeninfra.ru/get-zen_doc/271828/pub_65a0ba800b60a82653c9ab7b_65a101f0f838136e478bf87f/scale_1200",
         photoAfter: "Архив НКВД",
         charges: "Троцкизм, шпионаж, контрреволюция",
         rehabilitation: "Реабилитирован в 1988 году",
@@ -67,7 +68,7 @@ const categories = [
         fate: "Расстрелян 15 марта 1938 на Коммунарке",
         fameLevel: "Высокая (национальная)",
         photoBefore:
-          "https://commons.wikimedia.org/wiki/File:Aleksey_Rykov.jpg",
+          "https://www.thefamouspeople.com/profiles/images/alexei-rykov-1.jpg",
         photoAfter: "Архив НКВД",
         charges: "Шпионаж, правотроцкизм, вредительство, заговор",
         rehabilitation: "Реабилитирован в 1988 году",

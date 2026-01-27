@@ -513,6 +513,19 @@ body.dark-mode .archived-note {
   color: #d94444; /* Более приглушенный красный цвет */
 }
 
+.missing-photo-note {
+  font-family: "Times New Roman", Times, serif; /* Более благородный шрифт */
+  color: #6f1d1d; /* Более приглушенный темно-красный цвет */
+  font-style: italic;
+  margin-top: 0.5rem;
+  text-align: center;
+  font-size: 0.85rem;
+}
+
+body.dark-mode .missing-photo-note {
+  color: #d94444; /* Более приглушенный красный цвет */
+}
+
 /* Footer styles */
 .footer {
   border-top: 1px solid #d0ccc9;
