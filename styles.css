@@ -17,104 +17,109 @@ body {
     color 0.3s ease;
 }
 
-/* Более строгое применение темной темы через атрибут - имеет приоритет */
+body.dark-mode {
+  color: #d1d5db;
+  background: linear-gradient(to bottom, #1c1917 0%, #292524 100%);
+}
+
+/* Более строгое применение темной темы через атрибут */
 html[data-theme="dark"] body {
-  color: #d1d5db !important;
-  background: linear-gradient(to bottom, #1c1917 0%, #292524 100%) !important;
-  transition: background-color 0.3s ease, color 0.3s ease !important;
+  color: #d1d5db;
+  background: linear-gradient(to bottom, #1c1917 0%, #292524 100%);
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 html[data-theme="dark"] .header {
-  border-color: #44403c !important;
-  background-color: rgba(28, 25, 23, 0.8) !important;
+  border-color: #44403c;
+  background-color: rgba(28, 25, 23, 0.8);
 }
 
 html[data-theme="dark"] .title {
-  color: #f5f5f4 !important;
+  color: #f5f5f4;
 }
 
 html[data-theme="dark"] .subtitle {
-  color: #9ca3af !important;
+  color: #9ca3af;
 }
 
 html[data-theme="dark"] .exhibition-info {
-  color: #78716c !important;
+  color: #78716c;
 }
 
 html[data-theme="dark"] .category-btn {
-  background-color: #404040 !important;
-  color: #d1d5db !important;
-  border-color: #57534e !important;
+  background-color: #404040;
+  color: #d1d5db;
+  border-color: #57534e;
 }
 
 html[data-theme="dark"] .category-btn.selected {
-  background-color: #f59e0b !important;
+  background-color: #f59e0b;
 }
 
 html[data-theme="dark"] .category-btn:not(.selected):hover {
-  background-color: #57534e !important;
+  background-color: #57534e;
 }
 
 html[data-theme="dark"] .category-title h2 {
-  color: #d1d5db !important;
+  color: #d1d5db;
 }
 
 html[data-theme="dark"] .divider {
-  background-color: #f59e0b !important;
+  background-color: #f59e0b;
 }
 
 html[data-theme="dark"] .person-card {
-  background-color: #404040 !important;
-  border-color: #57534e !important;
+  background-color: #404040;
+  border-color: #57534e;
 }
 
 html[data-theme="dark"] .photo-container {
-  background-color: #57534e !important;
+  background-color: #57534e;
 }
 
 html[data-theme="dark"] .person-name {
-  color: #f5f5f4 !important;
+  color: #f5f5f4;
 }
 
 html[data-theme="dark"] .person-years {
-  color: #fbbf24 !important;
+  color: #fbbf24;
 }
 
 html[data-theme="dark"] .person-field {
-  color: #9ca3af !important;
+  color: #9ca3af;
 }
 
 html[data-theme="dark"] .person-biography {
-  color: #d1d5db !important;
+  color: #d1d5db;
 }
 
 html[data-theme="dark"] .additional-info {
-  border-color: #57534e !important;
+  border-color: #57534e;
 }
 
 html[data-theme="dark"] .info-label {
-  color: #9ca3af !important;
+  color: #9ca3af;
 }
 
 html[data-theme="dark"] .info-value {
-  color: #d1d5db !important;
+  color: #d1d5db;
 }
 
 html[data-theme="dark"] .archived-note {
-  color: #fbbf24 !important;
+  color: #fbbf24;
 }
 
 html[data-theme="dark"] .footer {
-  border-color: #44403c !important;
-  background-color: #1c1917 !important;
+  border-color: #44403c;
+  background-color: #1c1917;
 }
 
 html[data-theme="dark"] .footer-content {
-  color: #9ca3af !important;
+  color: #9ca3af;
 }
 
 html[data-theme="dark"] .memory-text {
-  color: #78716c !important;
+  color: #78716c;
 }
 
 .container {
@@ -136,6 +141,10 @@ html[data-theme="dark"] .memory-text {
     border-color 0.3s ease;
 }
 
+body.dark-mode .header {
+  border-color: #44403c;
+  background-color: rgba(28, 25, 23, 0.8);
+}
 
 .header-content {
   text-align: center;
@@ -151,6 +160,7 @@ html[data-theme="dark"] .memory-text {
   transition: color 0.3s ease;
 }
 
+body.dark-mode .title {
   color: #f5f5f4;
 }
 
@@ -160,6 +170,7 @@ html[data-theme="dark"] .memory-text {
   transition: color 0.3s ease;
 }
 
+body.dark-mode .subtitle {
   color: #9ca3af;
 }
 
@@ -171,6 +182,7 @@ html[data-theme="dark"] .memory-text {
   transition: color 0.3s ease;
 }
 
+body.dark-mode .exhibition-info {
   color: #78716c;
 }
 
@@ -201,6 +213,7 @@ html[data-theme="dark"] .memory-text {
   color: #374151;
 }
 
+body.dark-mode .category-btn {
   background-color: #404040;
   color: #d1d5db;
   border-color: #57534e;
@@ -215,6 +228,7 @@ html[data-theme="dark"] .memory-text {
   transform: scale(1.05);
 }
 
+body.dark-mode .category-btn.selected {
   background-color: #f59e0b;
 }
 
@@ -225,6 +239,7 @@ html[data-theme="dark"] .memory-text {
     0 2px 4px -1px rgba(0, 0, 0, 0.06);
 }
 
+body.dark-mode .category-btn:not(.selected):hover {
   background-color: #57534e;
 }
 
@@ -241,6 +256,7 @@ html[data-theme="dark"] .memory-text {
   margin-bottom: 0.75rem;
 }
 
+body.dark-mode .category-title h2 {
   color: #d1d5db;
 }
 
@@ -251,6 +267,7 @@ html[data-theme="dark"] .memory-text {
   margin: 0 auto;
 }
 
+body.dark-mode .divider {
   background-color: #f59e0b;
 }
 
@@ -275,6 +292,7 @@ html[data-theme="dark"] .memory-text {
   height: 100%;
 }
 
+body.dark-mode .person-card {
   background-color: #404040;
   border-color: #57534e;
 }
@@ -293,6 +311,7 @@ html[data-theme="dark"] .memory-text {
   cursor: pointer;
 }
 
+body.dark-mode .photo-container {
   background-color: #57534e;
 }
 
@@ -366,6 +385,7 @@ html[data-theme="dark"] .memory-text {
   line-height: 1.4;
 }
 
+body.dark-mode .person-name {
   color: #f5f5f4;
 }
 
@@ -376,6 +396,7 @@ html[data-theme="dark"] .memory-text {
   margin-bottom: 0.5rem;
 }
 
+body.dark-mode .person-years {
   color: #fbbf24;
 }
 
@@ -386,6 +407,7 @@ html[data-theme="dark"] .memory-text {
   margin-bottom: 1rem;
 }
 
+body.dark-mode .person-field {
   color: #9ca3af;
 }
 
@@ -398,6 +420,7 @@ html[data-theme="dark"] .memory-text {
   color: #4b5563;
 }
 
+body.dark-mode .person-biography {
   color: #d1d5db;
 }
 
@@ -407,6 +430,7 @@ html[data-theme="dark"] .memory-text {
   font-size: 0.75rem;
 }
 
+body.dark-mode .additional-info {
   border-color: #57534e;
 }
 
@@ -419,6 +443,7 @@ html[data-theme="dark"] .memory-text {
   color: #4b5563;
 }
 
+body.dark-mode .info-label {
   color: #9ca3af;
 }
 
@@ -427,6 +452,7 @@ html[data-theme="dark"] .memory-text {
   color: #374151;
 }
 
+body.dark-mode .info-value {
   color: #d1d5db;
 }
 
@@ -436,6 +462,7 @@ html[data-theme="dark"] .memory-text {
   margin-top: 0.25rem;
 }
 
+body.dark-mode .archived-note {
   color: #fbbf24;
 }
 
@@ -446,6 +473,7 @@ html[data-theme="dark"] .memory-text {
   margin-top: auto;
 }
 
+body.dark-mode .footer {
   border-color: #44403c;
   background-color: #1c1917;
 }
@@ -456,6 +484,7 @@ html[data-theme="dark"] .memory-text {
   color: #6b7280;
 }
 
+body.dark-mode .footer-content {
   color: #9ca3af;
 }
 
@@ -468,6 +497,7 @@ html[data-theme="dark"] .memory-text {
   color: #9ca3af;
 }
 
+body.dark-mode .memory-text {
   color: #78716c;
 }
 
@@ -502,3 +532,41 @@ html[data-theme="dark"] .memory-text {
   }
 }
 
+/* Приоритет атрибута data-theme над классом dark-mode */
+html[data-theme="dark"] body,
+html[data-theme="dark"] .header,
+html[data-theme="dark"] .title,
+html[data-theme="dark"] .subtitle,
+html[data-theme="dark"] .exhibition-info,
+html[data-theme="dark"] .category-btn,
+html[data-theme="dark"] .category-btn.selected,
+html[data-theme="dark"] .category-btn:not(.selected):hover,
+html[data-theme="dark"] .category-title h2,
+html[data-theme="dark"] .divider,
+html[data-theme="dark"] .person-card,
+html[data-theme="dark"] .photo-container,
+html[data-theme="dark"] .person-name,
+html[data-theme="dark"] .person-years,
+html[data-theme="dark"] .person-field,
+html[data-theme="dark"] .person-biography,
+html[data-theme="dark"] .additional-info,
+html[data-theme="dark"] .info-label,
+html[data-theme="dark"] .info-value,
+html[data-theme="dark"] .archived-note,
+html[data-theme="dark"] .footer,
+html[data-theme="dark"] .footer-content,
+html[data-theme="dark"] .memory-text {
+  /* Эти правила уже определены выше, но мы указываем, что атрибут имеет приоритет */
+}
+
+/* Убедимся, что атрибут имеет приоритет над классом */
+html[data-theme="dark"] body {
+  color: #d1d5db !important;
+  background: linear-gradient(to bottom, #1c1917 0%, #292524 100%) !important;
+}
+
+/* Дополнительные улучшения для более строгого контроля темной темы */
+html[data-theme="dark"] {
+  /* Убедимся, что все дочерние элементы получают правильные цвета */
+  color-scheme: dark;
+}

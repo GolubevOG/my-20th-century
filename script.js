@@ -18,6 +18,13 @@ class App {
     // Устанавливаем атрибут для более строгого контроля темы
     document.documentElement.setAttribute('data-theme', this.darkMode ? 'dark' : 'light');
 
+    // Также добавляем/удаляем класс для совместимости с CSS
+    if (this.darkMode) {
+      document.body.classList.add("dark-mode");
+    } else {
+      document.body.classList.remove("dark-mode");
+    }
+
     // Обновляем состояние UI элементов, связанных с темой
     this.updateThemeUI();
   }
