@@ -85,7 +85,7 @@ const categories = [
         fate: "Расстрелян 1 августа 1939",
         fameLevel: "Средняя (национальная)",
         photoBefore:
-          "https://commons.wikimedia.org/wiki/File:Grigory_Sokolnikov.jpg",
+          "https://lgz.ru/upload/articles/56d/j0b4pr1y105v4pkvv7jyhomx47k5omfe.jpg",
         photoAfter: "Архив НКВД",
         charges: "Троцкизм, шпионаж, контрреволюция",
         rehabilitation: "Реабилитирован в 1988 году",
