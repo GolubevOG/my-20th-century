@@ -414,6 +414,7 @@ body.dark-mode .photo-container {
   flex: 1;
   display: flex;
   flex-direction: column;
+  transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
 .person-name {

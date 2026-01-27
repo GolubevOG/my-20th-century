@@ -132,7 +132,7 @@ class App {
                     <p class="person-field">${person.field}</p>
                     <div class="person-biography">${person.biography}</div>
                 </div>
-                <div class="info-section info-section-2" style="display: none;">
+                <div class="info-section info-section-2" style="display: none; opacity: 0; transform: translateY(10px);">
                     <div class="additional-info">
                         <div class="info-item">
                             <span class="info-label">Дата репрессии:</span>
@@ -185,14 +185,41 @@ class App {
         }
       }
 
-      // Переключаем отображение информации
+      // Переключаем отображение информации с анимацией
       showInfoSection2 = !showInfoSection2;
+
       if (showInfoSection2) {
-        infoSection1.style.display = "none";
-        infoSection2.style.display = "block";
+        // Плавно скрываем первую часть
+        infoSection1.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
+        infoSection1.style.opacity = '0';
+        infoSection1.style.transform = 'translateY(-10px)';
+
+        // Через короткую задержку показываем вторую часть
+        setTimeout(() => {
+          infoSection1.style.display = 'none';
+          infoSection2.style.display = 'block';
+
+          // Плавно показываем вторую часть
+          infoSection2.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
+          infoSection2.style.opacity = '1';
+          infoSection2.style.transform = 'translateY(0)';
+        }, 300);
       } else {
-        infoSection1.style.display = "block";
-        infoSection2.style.display = "none";
+        // Плавно скрываем вторую часть
+        infoSection2.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
+        infoSection2.style.opacity = '0';
+        infoSection2.style.transform = 'translateY(10px)';
+
+        // Через короткую задержку показываем первую часть
+        setTimeout(() => {
+          infoSection2.style.display = 'none';
+          infoSection1.style.display = 'block';
+
+          // Плавно показываем первую часть
+          infoSection1.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
+          infoSection1.style.opacity = '1';
+          infoSection1.style.transform = 'translateY(0)';
+        }, 300);
       }
     });
 

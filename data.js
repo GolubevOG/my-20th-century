@@ -15,9 +15,9 @@ const categories = [
         fate: "Расстрелян 15 марта 1938 на Коммунарке",
         fameLevel: "Высокая (международная)",
         photoBefore:
-          "https://commons.wikimedia.org/wiki/File:Nikolai_Bukharin.jpg",
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/N.I._Bukharin_%281888-1938%29_Crop.jpg/960px-N.I._Bukharin_%281888-1938%29_Crop.jpg",
         photoAfter:
-          "https://735606.selcdn.ru/thumbnails/photos/2016/08/31/csrrizllmbuffb00_1024.jpg",
+          "https://upload.wikimedia.org/wikipedia/commons/3/38/Bucharin.bra.jpg",
         charges: "Шпионаж, правотроцкизм, вредительство, заговор",
         rehabilitation: "Реабилитирован в 1988 году (посмертно)",
         category: "Политические деятели",
