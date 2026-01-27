@@ -165,13 +165,17 @@ class App {
           statusIndicator.classList.remove("status-after");
         }
       } else {
-        // Если нет допустимого URL для фото после, просто показываем сообщение
-        alert("Фото после репрессии недоступно (архивные данные)");
-      }
-
-      // Добавляем эффект размытия, если фото после недоступно
-      if (!hasValidAfterUrl) {
-        photoImg.classList.toggle("blur");
+        // Если фото после репрессий недоступно, переключаем размытие на исходном фото
+        showAfterPhoto = !showAfterPhoto;
+        if (showAfterPhoto) {
+          photoImg.classList.add("blur");
+          statusIndicator.textContent = "После репрессии";
+          statusIndicator.classList.add("status-after");
+        } else {
+          photoImg.classList.remove("blur");
+          statusIndicator.textContent = "До репрессии";
+          statusIndicator.classList.remove("status-after");
+        }
       }
     });
 
