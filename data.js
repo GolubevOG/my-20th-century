@@ -33,8 +33,9 @@ const categories = [
         fate: "Расстрелян 25 августа 1936 (Первый московский процесс)",
         fameLevel: "Высокая (международная)",
         photoBefore:
-          "https://commons.wikimedia.org/wiki/File:Grigory_Zinovyev.jpg",
-        photoAfter: "Архив НКВД",
+          "https://static.kprf.ru/m/1600/1600/t/img/2017/05/c41ca4_3.jpg",
+        photoAfter:
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/FichaPolicialDeZinoviev1936.jpg/1200px-FichaPolicialDeZinoviev1936.jpg",
         charges: "Троцкизм, шпионаж, терроризм, контрреволюция",
         rehabilitation: "Реабилитирован в 1988 году",
         category: "Политические деятели",
