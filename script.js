@@ -110,6 +110,8 @@ class App {
   createPersonCard(person) {
     const card = document.createElement("div");
     card.className = "person-card";
+    card.setAttribute("role", "article");
+    card.setAttribute("aria-labelledby", `person-name-${person.id}`);
 
     // Проверяем, является ли photoAfter допустимым URL
     const hasValidAfterUrl =
@@ -118,29 +120,29 @@ class App {
         person.photoAfter.includes("https://"));
 
     card.innerHTML = `
-            <div class="photo-container">
-                <img src="${person.photoBefore}" alt="${person.name}" class="person-photo" data-before="${person.photoBefore}" data-after="${person.photoAfter}">
+            <div class="photo-container" role="button" tabindex="0" aria-label="Просмотреть фото ${person.name} до и после репрессии">
+                <img src="" data-src="${person.photoBefore}" alt="${person.name}" class="person-photo lazy-load" data-before="${person.photoBefore}" data-after="${person.photoAfter}" id="person-photo-${person.id}">
                 <div class="overlay">
                     <p class="overlay-text">Нажмите на фото</p>
                 </div>
-                <div class="status-indicator">До репрессии</div>
+                <div class="status-indicator" id="status-${person.id}">До репрессии</div>
             </div>
             <div class="card-content">
-                <div class="info-section info-section-1">
-                    <h3 class="person-name">${person.name}</h3>
-                    <p class="person-years">${person.years}</p>
-                    <p class="person-field">${person.field}</p>
-                    <div class="person-biography">${person.biography}</div>
+                <div class="info-section info-section-1" id="info-section-1-${person.id}">
+                    <h3 class="person-name" id="person-name-${person.id}">${person.name}</h3>
+                    <p class="person-years" id="person-years-${person.id}">${person.years}</p>
+                    <p class="person-field" id="person-field-${person.id}">${person.field}</p>
+                    <div class="person-biography" id="person-biography-${person.id}">${person.biography}</div>
                 </div>
-                <div class="info-section info-section-2" style="display: none; opacity: 0; transform: translateY(10px);">
+                <div class="info-section info-section-2" id="info-section-2-${person.id}" style="display: none; opacity: 0; transform: translateY(10px);" aria-hidden="true">
                     <div class="additional-info">
                         <div class="info-item">
                             <span class="info-label">Дата репрессии:</span>
-                            <span class="info-value">${person.repressionDate}</span>
+                            <span class="info-value" id="repression-date-${person.id}">${person.repressionDate}</span>
                         </div>
                         <div class="info-item">
                             <span class="info-label">Судьба:</span>
-                            <span class="info-value">${person.fate}</span>
+                            <span class="info-value" id="fate-${person.id}">${person.fate}</span>
                         </div>
                         ${!hasValidAfterUrl ? '<div class="archived-note">* Фото после репрессии недоступно (архивные данные)</div>' : ""}
                     </div>
@@ -159,7 +161,8 @@ class App {
     let showAfterPhoto = false;
     let showInfoSection2 = false;
 
-    photoContainer.addEventListener("click", () => {
+    // Функция для переключения фото и информации
+    const togglePhotoAndInfo = () => {
       if (hasValidAfterUrl) {
         showAfterPhoto = !showAfterPhoto;
 
@@ -167,10 +170,12 @@ class App {
           photoImg.src = person.photoAfter;
           statusIndicator.textContent = "После репрессии";
           statusIndicator.classList.add("status-after");
+          photoContainer.setAttribute("aria-label", `Фото ${person.name} после репрессии`);
         } else {
           photoImg.src = person.photoBefore;
           statusIndicator.textContent = "До репрессии";
           statusIndicator.classList.remove("status-after");
+          photoContainer.setAttribute("aria-label", `Фото ${person.name} до репрессии`);
         }
       } else {
         // Если фото после репрессий недоступно, переключаем размытие на исходном фото
@@ -179,10 +184,12 @@ class App {
           photoImg.classList.add("blur");
           statusIndicator.textContent = "После репрессии";
           statusIndicator.classList.add("status-after");
+          photoContainer.setAttribute("aria-label", `Фото ${person.name} после репрессии (размыто)`);
         } else {
           photoImg.classList.remove("blur");
           statusIndicator.textContent = "До репрессии";
           statusIndicator.classList.remove("status-after");
+          photoContainer.setAttribute("aria-label", `Фото ${person.name} до репрессии`);
         }
       }
 
@@ -194,6 +201,7 @@ class App {
         infoSection1.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
         infoSection1.style.opacity = '0';
         infoSection1.style.transform = 'translateY(-10px)';
+        infoSection1.setAttribute("aria-hidden", "true");
 
         // Через короткую задержку показываем вторую часть
         setTimeout(() => {
@@ -204,12 +212,14 @@ class App {
           infoSection2.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
           infoSection2.style.opacity = '1';
           infoSection2.style.transform = 'translateY(0)';
+          infoSection2.setAttribute("aria-hidden", "false");
         }, 300);
       } else {
         // Плавно скрываем вторую часть
         infoSection2.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
         infoSection2.style.opacity = '0';
         infoSection2.style.transform = 'translateY(10px)';
+        infoSection2.setAttribute("aria-hidden", "true");
 
         // Через короткую задержку показываем первую часть
         setTimeout(() => {
@@ -220,17 +230,63 @@ class App {
           infoSection1.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
           infoSection1.style.opacity = '1';
           infoSection1.style.transform = 'translateY(0)';
+          infoSection1.setAttribute("aria-hidden", "false");
         }, 300);
+      }
+    };
+
+    // Обработчики событий
+    photoContainer.addEventListener("click", togglePhotoAndInfo);
+
+    // Добавляем поддержку клавиатуры для доступности
+    photoContainer.addEventListener("keydown", (event) => {
+      if (event.key === "Enter" || event.key === " ") {
+        event.preventDefault();
+        togglePhotoAndInfo();
       }
     });
 
     // Обработка ошибки загрузки изображения
     photoImg.addEventListener("error", function () {
-      this.src =
-        'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="100" height="100"%3E%3Crect fill="%23ccc" width="100" height="100"/%3E%3Ctext fill="%23666" x="50%25" y="50%25" text-anchor="middle" dy=".3em" font-size="12"%3EФото недоступно%3C/text%3E%3C/svg%3E';
+      // Попробуем загрузить резервное изображение
+      if (!this.dataset.backupLoaded) {
+        this.dataset.backupLoaded = "true";
+        this.src = './images/placeholder.svg'; // Резервное изображение
+
+        // Если и резервное изображение не загрузится, используем inline SVG
+        this.onerror = function() {
+          this.src = 'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="400" height="600"%3E%3Crect fill="%23e0e0e0" width="400" height="600"/%3E%3Ctext x="50%25" y="50%25" text-anchor="middle" dominant-baseline="middle" font-family="Arial, sans-serif" font-size="16" fill="%23666666"%3EИзображение недоступно%3C/text%3E%3C/svg%3E';
+        };
+      }
     });
 
+    // Инициализация lazy loading для изображения
+    this.initializeLazyLoading(photoImg);
+
     return card;
+  }
+
+  initializeLazyLoading(imgElement) {
+    // Проверяем, поддерживает ли браузер Intersection Observer
+    if ('IntersectionObserver' in window) {
+      const imageObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            // Загружаем изображение
+            const img = entry.target;
+            img.src = img.dataset.src;
+            delete img.dataset.src; // Удаляем data-src, чтобы не загружать снова
+            imageObserver.unobserve(img); // Перестаем наблюдать за этим элементом
+          }
+        });
+      });
+
+      imageObserver.observe(imgElement);
+    } else {
+      // Резервный вариант для старых браузеров - просто загружаем изображение
+      imgElement.src = imgElement.dataset.src;
+      delete imgElement.dataset.src;
+    }
   }
 
   addEventListeners() {
@@ -267,3 +323,16 @@ document.addEventListener("keydown", (event) => {
     globalAppInstance.toggleDarkMode();
   }
 });
+
+// Регистрация сервис-воркера для PWA
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('/service-worker.js')
+      .then(registration => {
+        console.log('SW зарегистрирован: ', registration);
+      })
+      .catch(registrationError => {
+        console.log('SW регистрация не удалась: ', registrationError);
+      });
+  });
+}

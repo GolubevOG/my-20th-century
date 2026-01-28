@@ -14,10 +14,8 @@ const categories = [
         repressionDate: "27 февраля 1937 (арест)",
         fate: "Расстрелян 15 марта 1938 на Коммунарке",
         fameLevel: "Высокая (международная)",
-        photoBefore:
-          "https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/N.I._Bukharin_%281888-1938%29_Crop.jpg/960px-N.I._Bukharin_%281888-1938%29_Crop.jpg",
-        photoAfter:
-          "https://upload.wikimedia.org/wikipedia/commons/3/38/Bucharin.bra.jpg",
+        photoBefore: "./images/bukharin_before.jpg", // Замените на локальный путь после загрузки
+        photoAfter: "./images/bukharin_after.jpg",   // Замените на локальный путь после загрузки
         charges: "Шпионаж, правотроцкизм, вредительство, заговор",
         rehabilitation: "Реабилитирован в 1988 году (посмертно)",
         category: "Политические деятели",
@@ -32,10 +30,8 @@ const categories = [
         repressionDate: "16 декабря 1934 (арест)",
         fate: "Расстрелян 25 августа 1936 (Первый московский процесс)",
         fameLevel: "Высокая (международная)",
-        photoBefore:
-          "https://static.kprf.ru/m/1600/1600/t/img/2017/05/c41ca4_3.jpg",
-        photoAfter:
-          "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/FichaPolicialDeZinoviev1936.jpg/1200px-FichaPolicialDeZinoviev1936.jpg",
+        photoBefore: "./images/zinoviev_before.jpg", // Замените на локальный путь после загрузки
+        photoAfter: "./images/zinoviev_after.jpg",   // Замените на локальный путь после загрузки
         charges: "Троцкизм, шпионаж, терроризм, контрреволюция",
         rehabilitation: "Реабилитирован в 1988 году",
         category: "Политические деятели",
@@ -50,8 +46,7 @@ const categories = [
         repressionDate: "16 декабря 1934 (арест)",
         fate: "Расстрелян 25 августа 1936 (Первый московский процесс)",
         fameLevel: "Высокая (национальная)",
-        photoBefore:
-          "https://avatars.dzeninfra.ru/get-zen_doc/271828/pub_65a0ba800b60a82653c9ab7b_65a101f0f838136e478bf87f/scale_1200",
+        photoBefore: "./images/kamenev_before.jpg", // Замените на локальный путь после загрузки
         photoAfter: "Архив НКВД",
         charges: "Троцкизм, шпионаж, контрреволюция",
         rehabilitation: "Реабилитирован в 1988 году",
@@ -67,8 +62,7 @@ const categories = [
         repressionDate: "27 февраля 1937 (арест)",
         fate: "Расстрелян 15 марта 1938 на Коммунарке",
         fameLevel: "Высокая (национальная)",
-        photoBefore:
-          "https://www.thefamouspeople.com/profiles/images/alexei-rykov-1.jpg",
+        photoBefore: "./images/rykov_before.jpg", // Замените на локальный путь после загрузки
         photoAfter: "Архив НКВД",
         charges: "Шпионаж, правотроцкизм, вредительство, заговор",
         rehabilitation: "Реабилитирован в 1988 году",
@@ -84,8 +78,7 @@ const categories = [
         repressionDate: "1936 (исключение из партии и арест)",
         fate: "Расстрелян 1 августа 1939",
         fameLevel: "Средняя (национальная)",
-        photoBefore:
-          "https://lgz.ru/upload/articles/56d/j0b4pr1y105v4pkvv7jyhomx47k5omfe.jpg",
+        photoBefore: "./images/sokolnikov_before.jpg", // Замените на локальный путь после загрузки
         photoAfter: "Архив НКВД",
         charges: "Троцкизм, шпионаж, контрреволюция",
         rehabilitation: "Реабилитирован в 1988 году",
@@ -107,10 +100,8 @@ const categories = [
         repressionDate: "6 августа 1940 (арест)",
         fate: "Умер от голода 26 января 1943 в Саратовской тюрьме (камера смерти сохранилась)",
         fameLevel: "Высокая (международная)",
-        photoBefore:
-          "https://commons.wikimedia.org/wiki/File:Nikolai_Vavilov_1931.jpg",
-        photoAfter:
-          "https://www.vzsar.ru/news/2023/05/03/kamery-smerti-nikolaya-vavilova-v-saratovskoy-turme-vzyali-pod-ohrany-gosydarstva.html",
+        photoBefore: "./images/vavilov_before.jpg", // Замените на локальный путь после загрузки
+        photoAfter: "./images/vavilov_after.jpg",   // Замените на локальный путь после загрузки
         charges: "Шпионаж, контрреволюция, вредительство",
         rehabilitation: "Реабилитирован в 1955 году",
         category: "Учёные и интеллигенция",
@@ -125,8 +116,7 @@ const categories = [
         repressionDate: "19 июня 1930 (первый арест), 1937 (повторный)",
         fate: "Расстрелян 17 сентября 1938",
         fameLevel: "Высокая (международная)",
-        photoBefore:
-          "https://commons.wikimedia.org/wiki/File:Nikolai_Kondratiev.jpg",
+        photoBefore: "./images/kondratiev_before.jpg", // Замените на локальный путь после загрузки
         photoAfter: "Архив НКВД",
         charges: "Контрреволюционная деятельность, шпионаж, троцкизм",
         rehabilitation: "Реабилитирован в 1963 году",
@@ -142,7 +132,7 @@ const categories = [
         repressionDate: "28 апреля 1938 (арест)",
         fate: "Освобожден 28 апреля 1939 благодаря ходатайству П. Л. Капицы и письму Нобелевского лауреата Н. Бора",
         fameLevel: "Высокая (международная)",
-        photoBefore: "https://commons.wikimedia.org/wiki/File:Lev_Landau.jpg",
+        photoBefore: "./images/landau_before.jpg", // Замените на локальный путь после загрузки
         photoAfter: "Архив НКВД (личное дело на Лубянке)",
         charges:
           "Антисоветская агитация, распространение антисталинской листовки",
@@ -159,8 +149,7 @@ const categories = [
         repressionDate: "16 марта 1937 (второй арест)",
         fate: "Расстрелян 3 октября 1937 в Алма-Ате",
         fameLevel: "Средняя (национальная)",
-        photoBefore:
-          "https://commons.wikimedia.org/wiki/File:Alexander_Chayanov.jpg",
+        photoBefore: "./images/chayanov_before.jpg", // Замените на локальный путь после загрузки
         photoAfter: "Архив НКВД",
         charges:
           "Контрреволюционная деятельность, шпионаж, участие в кулацкой организации",
@@ -177,8 +166,7 @@ const categories = [
         repressionDate: "28 июня 1937 (арест)",
         fate: "Расстрелян 30 ноября 1937 в Ленинграде",
         fameLevel: "Высокая (международная)",
-        photoBefore:
-          "https://commons.wikimedia.org/wiki/File:Boris_Gerasimovich.jpg",
+        photoBefore: "./images/gerasimovich_before.jpg", // Замените на локальный путь после загрузки
         photoAfter: "Архив НКВД",
         charges: "Шпионаж, контрреволюция, участие в «Пулковском деле»",
         rehabilitation: "Реабилитирован (посмертно)",
@@ -200,9 +188,8 @@ const categories = [
         repressionDate: "Май 1938 (второй арест)",
         fate: "Умер конец 1938 или январь 1939 во Владивостокском пересыльном лагере от болезни и голода",
         fameLevel: "Высокая (международная)",
-        photoBefore: "https://commons.wikimedia.org/wiki/File:Mandelstam.jpg",
-        photoAfter:
-          "https://ru.wikipedia.org/wiki/Файл:NKVD_Mandelstam.jpg (Бутырская тюрьма, 1938)",
+        photoBefore: "./images/mandelstam_before.jpg", // Замените на локальный путь после загрузки
+        photoAfter: "./images/mandelstam_after.jpg",   // Замените на локальный путь после загрузки
         charges: "Контрреволюционная деятельность",
         rehabilitation: "Реабилитирован в 1956 году (посмертно)",
         category: "Писатели и поэты",
@@ -217,8 +204,7 @@ const categories = [
         repressionDate: "16 мая 1939 (арест)",
         fate: "Расстрелян 27 января 1940 (приговор подписал лично Сталин)",
         fameLevel: "Высокая (международная)",
-        photoBefore:
-          "https://commons.wikimedia.org/wiki/File:Isaac_Babel_1920s.jpg",
+        photoBefore: "./images/babel_before.jpg", // Замените на локальный путь после загрузки
         photoAfter: "Архив НКВД (Лубянка)",
         charges:
           "Шпионаж, контрреволюция, троцкизм, террористическая деятельность",
@@ -235,10 +221,8 @@ const categories = [
         repressionDate: "28 октября 1937 (арест)",
         fate: "Расстрелян 21 апреля 1938 в Москве (приговор и расстрел в один день)",
         fameLevel: "Высокая (национальная и международная)",
-        photoBefore:
-          "https://commons.wikimedia.org/wiki/File:Boris_Pilnyak.jpg",
-        photoAfter:
-          "https://myslenkov.livejournal.com/501644.html (официальная НКВД фото)",
+        photoBefore: "./images/pilnyak_before.jpg", // Замените на локальный путь после загрузки
+        photoAfter: "./images/pilnyak_after.jpg",   // Замените на локальный путь после загрузки
         charges: "Шпионаж в пользу Японии, троцкизм, контрреволюция",
         rehabilitation: "Реабилитирован в 1956 году (посмертно)",
         category: "Писатели и поэты",
@@ -253,8 +237,7 @@ const categories = [
         repressionDate: "15 июня 1938 (арест)",
         fate: "Освобожден в 1939. Погиб при бомбежке Москвы 30 октября 1941 (попал под бомбежку, возвращаясь с общественного мероприятия)",
         fameLevel: "Средняя (национальная)",
-        photoBefore:
-          "https://godliteratury.ru/articles/2024/04/04/korotkaia-drama-aleksandra-afinogenova",
+        photoBefore: "./images/afinogenov_before.jpg", // Замените на локальный путь после загрузки
         photoAfter: "Архив НКВД",
         charges: "Антисоветская деятельность, троцкизм",
         rehabilitation: "Реабилитирован (при освобождении)",
@@ -264,14 +247,13 @@ const categories = [
         id: 15,
         name: "Щуцкий, Юрий Константинович",
         years: "1897–1938",
-        field: "Философ, востоковед, переводчик",
+        field: "Ориенталист, синолог, переводчик",
         biography:
           "Советский ориенталист и синолог, специалист по китайской классической философии. Автор работ по «Книге перемен» (И Цзин). Востоковед мирового уровня",
         repressionDate: "Август 1937 (арест)",
         fate: "Расстрелян в феврале 1938",
         fameLevel: "Средняя (национальная)",
-        photoBefore:
-          "https://commons.wikimedia.org/wiki/File:Yuri_Shchutsky.jpg",
+        photoBefore: "./images/shchutsky_before.jpg", // Замените на локальный путь после загрузки
         photoAfter: "Архив НКВД",
         charges:
           "Участие в несуществовавшей террористической организации, шпионаж",
@@ -294,10 +276,8 @@ const categories = [
         repressionDate: "20 января 1938 (арест)",
         fate: "Расстрелян в феврале 1940. Театр закрыт 8 января 1938 (еще до ареста)",
         fameLevel: "Высокая (международная)",
-        photoBefore:
-          "https://commons.wikimedia.org/wiki/File:Vsevolod_Meyerhold_portrait.jpg",
-        photoAfter:
-          "https://arzamas.academy/mag/1238-meierhold (архивные документы и письма из тюрьмы)",
+        photoBefore: "./images/meyerhold_before.jpg", // Замените на локальный путь после загрузки
+        photoAfter: "./images/meyerhold_after.jpg",   // Замените на локальный путь после загрузки
         charges: "Шпионаж, контрреволюция, вредительство",
         rehabilitation: "Реабилитирован (посмертно)",
         category: "Деятели театра и искусства",
@@ -312,8 +292,7 @@ const categories = [
         repressionDate: "13 декабря 1938 (арест)",
         fate: "Расстрелян 2 февраля 1940",
         fameLevel: "Высокая (национальная)",
-        photoBefore:
-          "https://commons.wikimedia.org/wiki/File:Mikhail_Koltsov.jpg",
+        photoBefore: "./images/koltsov_before.jpg", // Замените на локальный путь после загрузки
         photoAfter: "Архив НКВД",
         charges: "Шпионаж, троцкизм, контрреволюция",
         rehabilitation: "Реабилитирован в 1956 году (посмертно)",
@@ -329,8 +308,7 @@ const categories = [
         repressionDate: "1937–1938 (гонения, закрытие театра)",
         fate: "Театр закрыт. Сам Таиров не был расстрелян, но подвергнут гонениям. Скончался в 1950 году в Москве",
         fameLevel: "Высокая (национальная)",
-        photoBefore:
-          "https://commons.wikimedia.org/wiki/File:Alexander_Tairov.jpg",
+        photoBefore: "./images/tairov_before.jpg", // Замените на локальный путь после загрузки
         photoAfter: "Архив музея",
         charges: "Формализм в искусстве, буржуазное влияние",
         rehabilitation:
@@ -347,10 +325,8 @@ const categories = [
         repressionDate: "1937–1938 (конфискация работ, гонения)",
         fate: "Умер в блокадном Ленинграде 1941 (голод и болезни). Работы считались запрещены и недостойны сохранения",
         fameLevel: "Средняя (национальная)",
-        photoBefore:
-          "https://commons.wikimedia.org/wiki/File:Pavel_Filonov.jpg",
-        photoAfter:
-          "(Фотография в тюрьме отсутствует; гонения были административные)",
+        photoBefore: "./images/filonov_before.jpg", // Замените на локальный путь после загрузки
+        photoAfter: "(Фотография в тюрьме отсутствует; гонения были административные)",
         charges: "Формализм, враждебность советской власти",
         rehabilitation: "Частично реабилитирован (1960-е годы, посмертно)",
         category: "Деятели театра и искусства",
@@ -365,8 +341,7 @@ const categories = [
         repressionDate: "1938 (арест)",
         fate: "Освобожден после войны (1944). Реабилитирован в 1956 году. Пережил войну и репрессии в лагерях",
         fameLevel: "Средняя (национальная)",
-        photoBefore:
-          "https://commons.wikimedia.org/wiki/File:Bernard_Reich.jpg",
+        photoBefore: "./images/reich_before.jpg", // Замените на локальный путь после загрузки
         photoAfter: "Архив НКВД",
         charges: "Формализм, антисоветская деятельность",
         rehabilitation: "Реабилитирован в 1956 году",
@@ -388,9 +363,8 @@ const categories = [
         repressionDate: "21 октября 1937 (арест)",
         fate: "Осужден на 15 лет, работал в закрытом КБ НКВД (ОТБ-16 в Москве). Освобожден 1941, реабилитирован 1955. Дожил до 1972 года",
         fameLevel: "Высокая (международная)",
-        photoBefore:
-          "https://commons.wikimedia.org/wiki/File:Andrei_Tupolev.jpg",
-        photoAfter: "https://historykorolev.ru/archives/1726 (в шарашке)",
+        photoBefore: "./images/tupolev_before.jpg", // Замените на локальный путь после загрузки
+        photoAfter: "./images/tupolev_after.jpg",   // Замените на локальный путь после загрузки
         charges: "Шпионаж, вредительство, контрреволюция",
         rehabilitation: "Реабилитирован в 1955 году",
         category: "Инженеры и конструкторы",
@@ -405,10 +379,8 @@ const categories = [
         repressionDate: "27 июня 1938 (арест)",
         fate: "Осужден на 10 лет каторги, затем работал в шарашке ОТБ Туполева. Освобожден в 1944. Реабилитирован. Стал главным конструктором программы «Восток»",
         fameLevel: "Высокая (международная)",
-        photoBefore:
-          "https://commons.wikimedia.org/wiki/File:Sergei_Korolev.jpg",
-        photoAfter:
-          "https://historykorolev.ru/archives/1726 (тюремное фото из Бутырской тюрьмы, 29 февраля 1940)",
+        photoBefore: "./images/korolev_before.jpg", // Замените на локальный путь после загрузки
+        photoAfter: "./images/korolev_after.jpg",   // Замените на локальный путь после загрузки
         charges: "Шпионаж, антисоветская деятельность, троцкизм",
         rehabilitation:
           "Реабилитирован в 1944 году (при досрочном освобождении)",
@@ -424,10 +396,8 @@ const categories = [
         repressionDate: "2 ноября 1937 (арест)",
         fate: "Расстрелян 11 января 1938 (за 3 года до начала войны). Авторство присвоено А. Костикову",
         fameLevel: "Средняя (национальная)",
-        photoBefore:
-          "https://commons.wikimedia.org/wiki/File:Georgy_Langemak.jpg",
-        photoAfter:
-          "https://antiqrussia.ru/product/fotografiya-gamarnik-ya-b-v-sanatorii-sochi-1936-god/",
+        photoBefore: "./images/langemak_before.jpg", // Замените на локальный путь после загрузки
+        photoAfter: "./images/langemak_after.jpg",   // Замените на локальный путь после загрузки
         charges:
           "Шпионаж в пользу Германии, контрреволюция, участие в антисоветской организации",
         rehabilitation: "Реабилитирован (посмертно)",
@@ -443,8 +413,7 @@ const categories = [
         repressionDate: "23 марта 1938 (арест)",
         fate: "Осужден на 8 лет, работал в шарашке ОКБ-16 в Казани. Освобожден в 1944. Реабилитирован. Создавал двигатели для кораблей Королева",
         fameLevel: "Высокая (международная)",
-        photoBefore:
-          "https://commons.wikimedia.org/wiki/File:Valentin_Glushko.jpg",
+        photoBefore: "./images/glushko_before.jpg", // Замените на локальный путь после загрузки
         photoAfter: "Архив НКВД",
         charges: "Шпионаж, антисоветская деятельность",
         rehabilitation: "Реабилитирован в 1944 году",
@@ -460,8 +429,7 @@ const categories = [
         repressionDate: "1938 (арест)",
         fate: "Освобожден в 1939, реабилитирован. Продолжил создавать самолеты, став одним из самых успешных конструкторов СССР. Дожил до 1977 года",
         fameLevel: "Высокая (национальная)",
-        photoBefore:
-          "https://commons.wikimedia.org/wiki/File:Sergei_Ilyushin.jpg",
+        photoBefore: "./images/ilyushin_before.jpg", // Замените на локальный путь после загрузки
         photoAfter: "Архив НКВД",
         charges: "Вредительство, контрреволюция, саботаж",
         rehabilitation: "Реабилитирован в 1939 году",
@@ -483,8 +451,7 @@ const categories = [
         repressionDate: "22 мая 1937 (арест)",
         fate: "Расстрелян 11 июня 1937 (Первый процесс над военачальниками). Вместе с 8 маршалами и высшими командирами",
         fameLevel: "Высокая (международная)",
-        photoBefore:
-          "https://commons.wikimedia.org/wiki/File:Mikhail_Tukhachevsky.jpg",
+        photoBefore: "./images/tukhachevsky_before.jpg", // Замените на локальный путь после загрузки
         photoAfter: "Архив НКВД (личное дело)",
         charges:
           "Шпионаж, участие в военно-фашистском заговоре, контрреволюция",
@@ -501,8 +468,7 @@ const categories = [
         repressionDate: "31 мая 1937 (арест)",
         fate: "Расстрелян 31 июля 1937",
         fameLevel: "Высокая (национальная)",
-        photoBefore:
-          "https://antiqrussia.ru/product/fotografiya-gamarnik-ya-b-v-sanatorii-sochi-1936-god/",
+        photoBefore: "./images/gamarnik_before.jpg", // Замените на локальный путь после загрузки
         photoAfter: "Архив НКВД",
         charges:
           "Шпионаж, участие в военно-фашистском заговоре, контрреволюция",
@@ -519,8 +485,7 @@ const categories = [
         repressionDate: "май 1937 (арест)",
         fate: "Расстрелян 29 июня 1937",
         fameLevel: "Средняя (национальная)",
-        photoBefore:
-          "https://commons.wikimedia.org/wiki/File:Vitaly_Primakov.jpg",
+        photoBefore: "./images/primakov_before.jpg", // Замените на локальный путь после загрузки
         photoAfter: "Архив НКВД",
         charges: "Участие в военно-фашистском заговоре, шпионаж",
         rehabilitation: "Реабилитирован (посмертно)",
@@ -536,8 +501,7 @@ const categories = [
         repressionDate: "29 мая 1937 (арест)",
         fate: "Расстрелян 12 июня 1937",
         fameLevel: "Средняя (национальная)",
-        photoBefore:
-          "https://commons.wikimedia.org/wiki/File:Ieronim_Ubovich.jpg",
+        photoBefore: "./images/ubovich_before.jpg", // Замените на локальный путь после загрузки
         photoAfter: "Архив НКВД",
         charges: "Участие в военно-фашистском заговоре, контрреволюция",
         rehabilitation: "Реабилитирован (посмертно)",
@@ -553,7 +517,7 @@ const categories = [
         repressionDate: "29 мая 1937 (арест)",
         fate: "Расстрелян 11 июня 1937",
         fameLevel: "Средняя (национальная)",
-        photoBefore: "https://commons.wikimedia.org/wiki/File:Ion_Yakir.jpg",
+        photoBefore: "./images/yakir_before.jpg", // Замените на локальный путь после загрузки
         photoAfter: "Архив НКВД",
         charges: "Участие в военно-фашистском заговоре, шпионаж",
         rehabilitation: "Реабилитирован (посмертно)",
