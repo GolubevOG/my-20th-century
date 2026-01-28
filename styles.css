@@ -120,6 +120,10 @@ html[data-theme="dark"] .memory-text {
   color: #9ca3af; /* Светло-серый */
 }
 
+html[data-theme="dark"] .author {
+  color: #9ca3af; /* Светло-серый */
+}
+
 .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -539,13 +543,30 @@ body.dark-mode .footer {
 }
 
 .footer-content {
-  text-align: center;
   padding: 1.5rem 0;
   color: #5b6573; /* Более приглушенный серый */
 }
 
 body.dark-mode .footer-content {
   color: #8c939a; /* Более приглушенный серый для темной темы */
+}
+
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #d0ccc9;
+}
+
+body.dark-mode .footer-top {
+  border-bottom: 1px solid #3c3a38;
+}
+
+.footer-info {
+  text-align: left;
 }
 
 .exhibition-name {
@@ -561,6 +582,23 @@ body.dark-mode .footer-content {
 
 body.dark-mode .memory-text {
   color: #78716c; /* Более приглушенный серый для темной темы */
+}
+
+.footer-bottom {
+  text-align: center;
+  width: 100%;
+}
+
+.author {
+  font-family: "Times New Roman", Times, serif; /* Более благородный шрифт */
+  font-size: 0.8rem;
+  color: #6b7280; /* Серый */
+  font-style: italic;
+  margin: 0;
+}
+
+body.dark-mode .author {
+  color: #8c939a; /* Более приглушенный серый для темной темы */
 }
 
 /* Responsive design */
