@@ -440,6 +440,7 @@ body.dark-mode .person-name {
   color: #5d1d1d; /* Более приглушенный темно-красный цвет */
   font-weight: 500;
   margin-bottom: 0.5rem;
+  text-align: center;
 }
 
 body.dark-mode .person-years {
