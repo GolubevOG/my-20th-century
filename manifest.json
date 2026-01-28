@@ -1,0 +1,21 @@
+{
+  "name": "Стулья - Репрессированные деятели СССР 1930-х годов",
+  "short_name": "Стулья",
+  "description": "Интерактивный проект о репрессированных деятелях СССР 1930-х годов",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#1f2937",
+  "icons": [
+    {
+      "src": "./images/img01_1.jpg",
+      "sizes": "192x192",
+      "type": "image/jpeg"
+    },
+    {
+      "src": "./images/img01_1.jpg",
+      "sizes": "512x512",
+      "type": "image/jpeg"
+    }
+  ]
+}

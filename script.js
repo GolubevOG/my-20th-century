@@ -113,11 +113,13 @@ class App {
     card.setAttribute("role", "article");
     card.setAttribute("aria-labelledby", `person-name-${person.id}`);
 
-    // Проверяем, является ли photoAfter допустимым URL
+    // Проверяем, является ли photoAfter допустимым URL или локальным изображением
     const hasValidAfterUrl =
       person.photoAfter &&
       (person.photoAfter.includes("http://") ||
-        person.photoAfter.includes("https://"));
+        person.photoAfter.includes("https://") ||
+        person.photoAfter.startsWith("./images/") ||
+        person.photoAfter.startsWith("/images/"));
 
     card.innerHTML = `
             <div class="photo-container" role="button" tabindex="0" aria-label="Просмотреть фото ${person.name} до и после репрессии">
@@ -144,9 +146,8 @@ class App {
                             <span class="info-label">Судьба:</span>
                             <span class="info-value" id="fate-${person.id}">${person.fate}</span>
                         </div>
-                        ${!hasValidAfterUrl ? '<div class="archived-note">* Фото после репрессии недоступно (архивные данные)</div>' : ""}
+                        ${!hasValidAfterUrl || person.photoAfter === null ? '<div class="archived-note">Фото недоступно</div>' : ""}
                     </div>
-                    ${!hasValidAfterUrl ? '<div class="missing-photo-note">Фото после репрессии отсутствует</div>' : ""}
                 </div>
             </div>
         `;
@@ -163,7 +164,7 @@ class App {
 
     // Функция для переключения фото и информации
     const togglePhotoAndInfo = () => {
-      if (hasValidAfterUrl) {
+      if (hasValidAfterUrl && person.photoAfter !== null) {
         showAfterPhoto = !showAfterPhoto;
 
         if (showAfterPhoto) {
@@ -274,8 +275,10 @@ class App {
           if (entry.isIntersecting) {
             // Загружаем изображение
             const img = entry.target;
-            img.src = img.dataset.src;
-            delete img.dataset.src; // Удаляем data-src, чтобы не загружать снова
+            if (img.dataset.src) {
+              img.src = img.dataset.src;
+              delete img.dataset.src; // Удаляем data-src, чтобы не загружать снова
+            }
             imageObserver.unobserve(img); // Перестаем наблюдать за этим элементом
           }
         });
@@ -284,8 +287,10 @@ class App {
       imageObserver.observe(imgElement);
     } else {
       // Резервный вариант для старых браузеров - просто загружаем изображение
-      imgElement.src = imgElement.dataset.src;
-      delete imgElement.dataset.src;
+      if (imgElement.dataset.src) {
+        imgElement.src = imgElement.dataset.src;
+        delete imgElement.dataset.src;
+      }
     }
   }
 
